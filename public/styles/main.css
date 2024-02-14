@@ -3,7 +3,15 @@ body{
     margin: 0px auto;
     background-color: #EBEBDF;
     color: #EB631B;
+    position: relative;
+    padding-bottom: 100px;
+    
 }
+
+img{
+    line-height: 0;
+}
+
 h1, h2{
     font-family: 'Imbue', serif;
     font-weight: 300;
@@ -58,10 +66,9 @@ h1{
 
 .home-overlay{
     background-image: url("/images/texture.png");
-    background-repeat: repeat;
+    background-size: contain;
     mix-blend-mode: multiply;
     background-clip: border-box;
-    
     padding: 30px 50px ;
     padding-bottom: 70px;
 }
@@ -132,12 +139,18 @@ h1{
 }
 
 .footer{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: min-content;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-top: 1px solid #EB631B ;
     padding-top: 10px;
-    margin-top: 80px;
+    margin-top: auto;
+    margin-bottom: 0;
 }
 
 .logo_footer img{
