@@ -1,7 +1,14 @@
 <%- include("partials/header.ejs") %>
 
-<section class="post_creation">
-
+<section class="post_creation ">
+    <h1>Do you Wanna Post Something?</h1>
+    <form action="post.ejs" method="post">
+        <label for="header">header</label><br>
+        <input type="text" name="header" id="header"><br>
+        <label for="textPost">post</label><br>
+        <input type="text" name="textPost" id="textPost"><br>
+        <input type="submit" value="POST">
+    </form>
 </section>
 
 <%- include("partials/wall.ejs") %>
