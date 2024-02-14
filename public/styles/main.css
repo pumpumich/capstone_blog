@@ -63,7 +63,7 @@ h1{
     background-clip: border-box;
     
     padding: 30px 50px ;
-    padding-bottom: 100px;
+    padding-bottom: 70px;
 }
 
 .gallery_list{
@@ -73,6 +73,9 @@ h1{
     list-style: none;
     justify-content: space-around;
     margin-bottom: 100px;
+}
+.gallery_item{
+    margin: 0 10px;
 }
 
 .gallery_item img{
@@ -126,4 +129,31 @@ h1{
 
 .blogpost_text{
     margin: 0;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #EB631B ;
+    padding-top: 10px;
+    margin-top: 80px;
+}
+
+.logo_footer img{
+    width: 100px;
+}
+.footer .nav_list{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer .nav_list_item{
+    font-family: 'Imbue';
+    
+    list-style: none;
+}
+.footer .nav_list_item a{
+    color: black;
+    text-decoration: none;
 }
