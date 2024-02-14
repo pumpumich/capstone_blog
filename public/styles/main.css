@@ -1,0 +1,91 @@
+body{
+    width: 90%;
+    margin: 0px auto;
+    background-color: #EBEBDF;
+    color: #EB631B;
+}
+h1, h2{
+    font-family: 'Imbue', serif;
+    font-weight: 300;
+    text-align: center;
+}
+
+.nav{
+    display: flex;
+    position: sticky;
+    z-index: 10;
+    top: 0px;
+    padding: 10px 0;
+    margin-bottom: 50px;
+
+}
+
+.nav_list{
+    display: flex;
+    padding: 0;
+    margin: 0 15px;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    list-style: none;
+    font-family: 'Crimson Text', serif;
+    font-size: 24px;
+}
+
+.nav_list_item a{
+    text-decoration: none;
+    color: #EB631B;
+}
+
+.logo_nav{
+    margin-right: auto;
+}
+
+h1{
+    font-size: 96px;
+    margin: 15px auto 5px;
+}
+
+.home{
+    width: 70%;
+    margin: 0 auto;
+    /* background-image: url("/images/texture.png");
+    background-repeat: repeat;
+    background-clip: border-box; */
+   
+    
+}
+
+.home-overlay{
+    background-image: url("/images/texture.png");
+    background-repeat: repeat;
+    mix-blend-mode: multiply;
+    background-clip: border-box;
+    
+    padding: 30px 50px ;
+    padding-bottom: 100px;
+}
+
+.gallery_list{
+    display: flex;
+    width: 80%;
+    margin: 50px auto;
+    list-style: none;
+    justify-content: space-around;
+    margin-bottom: 100px;
+}
+
+.gallery_item img{
+    overlay: multiply;
+    /* mix-blend-mode: multiply */
+}
+
+.home_intro{
+    font-family: "Dawning of a New Day";
+    font-size: 3rem;
+    line-height: 100%;
+    color: #6A687A;
+    margin: 50px auto;
+    width: 60%;
+    text-align: center;
+}
