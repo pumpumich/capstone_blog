@@ -68,7 +68,7 @@ h1{
 
 .gallery_list{
     display: flex;
-    width: 80%;
+    width: 90%;
     margin: 50px auto;
     list-style: none;
     justify-content: space-around;
@@ -86,6 +86,44 @@ h1{
     line-height: 100%;
     color: #6A687A;
     margin: 50px auto;
-    width: 60%;
+    width: 70%;
     text-align: center;
+}
+
+.wall{
+    width: 80%;
+    margin: 50px auto;
+}
+
+.wall_header{
+    font-size: 4.6rem;
+    margin-bottom: 20px;
+}
+
+.blogpost{
+    width: 60%;
+    color:black;
+    font-family: "Crimson text";
+}
+
+.blogpost:nth-child(2n - 1){
+    margin-left: auto;
+    text-align: right;
+}
+
+.blogpost:nth-child(2n){
+    margin-right: auto;
+}
+
+.blogpost_date{
+    padding: 0;
+    margin: 0;
+}
+.blogpost_header{
+    padding: 0;
+    margin: 0;
+}
+
+.blogpost_text{
+    margin: 0;
 }
