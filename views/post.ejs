@@ -2,13 +2,15 @@
 
 <section class="post_creation ">
     <h1>Do you Wanna Post Something?</h1>
+    <div class="form_container">
     <form action="post.ejs" method="post">
         <label for="header">header</label><br>
-        <input type="text" name="header" id="header"><br>
+        <input type="text" name="header" id="header" placeholder="Name your post..."><br>
         <label for="textPost">post</label><br>
-        <input type="text" name="textPost" id="textPost"><br>
-        <input type="submit" value="POST">
+        <textarea name="textPost" id="textPost" rows="10" cols="100" placeholder="Type something..."></textarea><br>
+        <input type="submit" id="post_submit" value="POST" >
     </form>
+    </div>
 </section>
 
 <%- include("partials/wall.ejs") %>
