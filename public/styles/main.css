@@ -181,7 +181,7 @@ h1{
     border: 1px solid #EB631B;
 }
 
-form{
+.post_form{
    width: 60%;
     margin: 50px auto; 
 }
