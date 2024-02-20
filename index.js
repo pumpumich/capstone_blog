@@ -8,14 +8,14 @@ var day = date.getDate();
 var month = date.getMonth() + 1;
 var year = date.getFullYear();
 
-function Post(postHeader, postText){
+function Post(postHeader, postText, id){
     this.postHeader = postHeader;
     this.postText = postText;
-    this.date = `${day}/${month}/${year}`
+    this.date = `${day}/${month}/${year}`;
+    this.id = id;
 };
 
-
-var postsWall=[];
+var postsWall = new Map();
 
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -32,18 +32,15 @@ app.get("/post", (req, res) => {
     });
 });
 
-app.post("/createNewPost", (req, res) => {
-    // console.log(req.body);
-    var newPost = new Post(req.body['header'], req.body['textPost']);
-    postsWall.push(newPost);
+app.post("/post", (req, res) => {
+    var newPost = new Post(req.body['header'], req.body['textPost'], req.body['id']);
+    postsWall.set(req.body['id'], newPost);
     res.render("post.ejs", {
         postsWall : postsWall});
-
 });
 
 app.post("/deletePost", (req, res) => {
-    console.log(req);
-    console.log("clickde");
+    postsWall.delete(req.body.id);
     res.render("post.ejs", {
         postsWall : postsWall});
 });

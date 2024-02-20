@@ -1,17 +1,22 @@
 <section class="wall">
     
-    <% if (locals.postsWall.length >= 1){%>
+    <% if (locals.postsWall.size >= 1){%>
         <h2 class="wall_header">Your blog-posts</h2>
-    <% postsWall.reverse().forEach(item => { %>
-        <div class="blogpost">
-            <p class="blogpost_date"><%= item.date %></p>
-            <h3 class="blogpost_header"><%= item.postHeader %></h3>
-            <p class="blogpost_text"><%= item.postText %></p>
-            <form action="/submit" method="POST">
-                <input type="submit" formaction="/deletePost" value="🗑️">
-            </form>
-            </div>
-    <%}); %>
+        <% const items = postsWall.values() %>
+        <% let item %>
+        <div class="wall_column">
+        <% while ((item = items.next()) && !item.done) { %>
+            <div class="blogpost">
+                <p class="blogpost_date"><%= item.value.date %></p>
+                <h3 class="blogpost_header"><%= item.value.postHeader %></h3>
+                <p class="blogpost_text"><%= item.value.postText %></p>
+                <form action="/wall" method="POST">
+                    <input type="hidden" name="id" value="<%= item.value.id %>" >
+                    <input class="deleteBtn" type="submit" formaction="/deletePost" value="🗑️">
+                </form>
+                </div>
+        <%} %>
+        </div>
         <% } else { %>
         <h2 class="wall_header">Nothing posted yet..</h2>
         <%} %>
