@@ -40,9 +40,17 @@ app.post("/post", (req, res) => {
 });
 
 app.post("/deletePost", (req, res) => {
+    
+    console.log(req.headers.referer);
     postsWall.delete(req.body.id);
+    if(req.headers.referer.includes("/post")){
     res.render("post.ejs", {
         postsWall : postsWall});
+    } else{
+        res.render("index.ejs", {
+            postsWall: postsWall
+        });
+    }   
 });
 
 app.listen(port, () => {
