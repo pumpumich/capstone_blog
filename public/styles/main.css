@@ -234,6 +234,7 @@ input[id="textPost"]{
 
 input[id="post_submit"]{
     margin: 0 auto;
+    margin-right: 10px;
     background-color: #EB631B;
     color: white;
     border: none;
@@ -308,4 +309,13 @@ label{
 
 .contact_link:hover{
     color: #954013;
+}
+
+input[type="submit"]{
+    transition: 0.3s;
+}
+
+input[type="submit"]:hover{
+    transform: scale(1.1);
+    cursor: pointer;
 }
