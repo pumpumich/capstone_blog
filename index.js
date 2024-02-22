@@ -40,7 +40,7 @@ app.post("/post", (req, res) => {
 });
 
 app.post("/deletePost", (req, res) => {
-    
+
     console.log(req.headers.referer);
     postsWall.delete(req.body.id);
     if(req.headers.referer.includes("/post")){
@@ -51,6 +51,28 @@ app.post("/deletePost", (req, res) => {
             postsWall: postsWall
         });
     }   
+});
+
+app.post("/editPost", (req, res) => {
+    
+    console.log(postsWall.get(req.body.id));
+    var editedPost = postsWall.get(req.body.id);
+    res.render("edit.ejs", {
+        postsWall: postsWall,
+        editedPost: editedPost
+    });
+});
+
+app.post("/saveChanges", (req, res) => {
+    var newPost = new Post(req.body['header'], req.body['textPost'], req.body['id']);
+    postsWall.set(req.body['id'], newPost);
+    res.render("post.ejs", {
+        postsWall : postsWall});
+});
+
+app.post("/discardChanges", (req, res) => {
+    res.render("post.ejs", {
+        postsWall : postsWall});
 });
 
 app.get("/contact", (req, res) => {
