@@ -252,12 +252,13 @@ label{
     font-family: 'Crimson text';
 }
 
-.deleteBtn{
+.postBtn{
     background-color: transparent;
     border: none;
     margin: 0;
     padding: 0;
     cursor: pointer;
+    margin-right: 10px;
 }
 
 .contact_container{
