@@ -53,6 +53,10 @@ app.post("/deletePost", (req, res) => {
     }   
 });
 
+app.get("/contact", (req, res) => {
+    res.render("contact.ejs");
+});
+
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
   });

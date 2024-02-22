@@ -259,3 +259,52 @@ label{
     padding: 0;
     cursor: pointer;
 }
+
+.contact_container{
+    display: flex;
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact_block{
+    width: 800px;
+    height: 50%;
+    margin: 0 auto;
+    padding: 0;
+    border: 4px #EB631B solid;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact_header{
+    margin: 0;
+    padding: 0;
+    font-family: 'Italiana', sans-serif;
+    font-size: 11rem;
+    line-height: 90%;
+    letter-spacing: -2px;
+    text-align: left;
+}
+
+.contacts_list{
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    padding: 0 15px 5px;
+    font-family: 'Crimson Text', serif;
+    letter-spacing: -0.5px;
+    line-height: 100%;
+    font-size: 1.5rem;
+}
+
+.contact_link{
+    color: #EB631B;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.contact_link:hover{
+    color: #954013;
+}
